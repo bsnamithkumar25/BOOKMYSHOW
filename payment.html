@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Payment</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="theaters.html">Theaters</a></li>
+                <li><a href="login.html">Login / Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="payment-section">
+            <h2>Confirm Your Payment</h2>
+            <form action="confirmation.html" method="post">
+                <div class="form-group">
+                    <label for="cardNumber">Card Number:</label>
+                    <input type="text" id="cardNumber" name="cardNumber" required>
+                </div>
+                <div class="form-group">
+                    <label for="expiryDate">Expiry Date:</label>
+                    <input type="month" id="expiryDate" name="expiryDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" name="cvv" required>
+                </div>
+                <button type="submit">Pay Now</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 TickeTribe. All rights reserved.</p>
+    </footer>
+</body>
+</html>

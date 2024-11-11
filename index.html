@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TickeTribe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Ticke<span>Tribe</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="theaters.html">Theaters</a></li>
+                <li><a href="login.html">Login / Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="search-section">
+        <input type="text" id="searchBar" placeholder="Search for movies or events..." oninput="search()">
+    </section>
+    <section class="location-section">
+        <h3>Select Your Location</h3>
+        <div class="location-dropdown">
+            <label for="locationSelect">Choose a city:</label>
+            <select id="locationSelect" onchange="updateLocation()">
+                <option value="" disabled selected>Select Location</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Bengaluru">Bengaluru</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Pune">Pune</option>
+                <option value="Ahmedabad">Ahmedabad</option>
+                <option value="Jaipur">Jaipur</option>
+                <option value="Lucknow">Lucknow</option>
+            </select>
+        </div>
+    </section>
+    
+    <section class="filter-section">
+        <h3>Filter by Genre:</h3>
+        <button onclick="filterGenre('Action')">Action</button>
+        <button onclick="filterGenre('Drama')">Drama</button>
+        <button onclick="filterGenre('Comedy')">Comedy</button>
+        <button onclick="filterGenre('Thriller')">Thriller</button>
+    </section>
+    <section class="hero">
+        <h2>Find Your Favorite Movies & Shows</h2>
+        <div class="container" id="movieList">
+            <div class="card" data-genre="Action">
+                <img src="movie-poster1.jpg" alt="Movie 1" id="movie">
+                <h3>Pushpa 2: The Rule </h3>
+                <p>Genre: Action</p>
+                <button onclick="window.location.href='movie-details.html'">View Details</button>
+                <button onclick="window.location.href='booking.html'">Book Now</button>
+            </div>
+            <div class="card" data-genre="Drama">
+                <img src="movie-poster2.jpg" alt="Movie 2" id="movie">
+                <h3>Bheemla Nayak</h3>
+                <p>Genre: Drama</p>
+                <button onclick="window.location.href='movie-details.html'">View Details</button>
+                <button onclick="window.location.href='booking.html'">Book Now</button>
+            </div>
+            <div class="card" data-genre="Comedy">
+                <img src="movie-poster3.jpg" alt="Movie 3" id="movie">
+                <h3>Ee Nagaraniki Emaindhi</h3>
+                <p>Genre: Comedy</p>
+                <button onclick="window.location.href='movie-details.html'">View Details</button>
+                <button onclick="window.location.href='booking.html'">Book Now</button>
+            </div>
+            <div class="card" data-genre="Thriller">
+                <img src="movie-poster4.jpg" alt="Movie 4" id="movie">
+                <h3>Evaru</h3>
+                <p>Genre: Thriller</p>
+                <button onclick="window.location.href='movie-details.html'">View Details</button>
+                <button onclick="window.location.href='booking.html'">Book Now</button>
+            </div>
+            <div class="card" data-genre="Action">
+                <img src="movie-poster5.jpg" alt="Movie 5" id="movie">
+                <h3>Spider Man:No Way Home</h3>
+                <p>Genre: Action</p>
+                <button onclick="window.location.href='movie-details.html'">View Details</button>
+                <button onclick="window.location.href='booking.html'">Book Now</button>
+            </div>
+            <div class="card" data-genre="Drama">
+                <img src="movie-poster6.jpg" alt="Movie 6" id="movie">
+                <h3>Lal Singh Chadda</h3>
+                <p>Genre: Drama</p>
+                <button onclick="window.location.href='movie-details.html'">View Details</button>
+                <button onclick="window.location.href='booking.html'">Book Now</button>
+            </div>
+            <div class="card" data-genre="Comedy">
+                <img src="movie-poster7.jpg" alt="Movie 7" id="movie">
+                <h3>Mathu Vadhalara</h3>
+                <p>Genre: Comedy</p>
+                <button onclick="window.location.href='movie-details.html'">View Details</button>
+                <button onclick="window.location.href='booking.html'">Book Now</button>
+            </div>
+            <div class="card" data-genre="Thriller">
+                <img src="movie-poster8.jpg" alt="Movie 8" id="movie">
+                <h3>Salaar</h3>
+                <p>Genre: Thriller</p>
+                <button onclick="window.location.href='movie-details.html'">View Details</button>
+                <button onclick="window.location.href='booking.html'">Book Now</button>
+            </div>
+            <div class="card" data-genre="Action">
+                <img src="movie-poster9.jpg" alt="Movie 9" id="movie">
+                <h3>OG</h3>
+                <p>Genre: Action</p>
+                <button onclick="window.location.href='movie-details.html'">View Details</button>
+                <button onclick="window.location.href='booking.html'">Book Now</button>
+            </div>
+            <div class="card" data-genre="Drama">
+                <img src="movie-poster10.jpg" alt="Movie 10" id="movie">
+                <h3>Dunki</h3>
+                <p>Genre: Drama</p>
+                <button onclick="window.location.href='movie-details.html'">View Details</button>
+                <button onclick="window.location.href='booking.html'">Book Now</button>
+            </div>
+        </div>
+    </section>
+    <section class="booking-section" id="bookingSection" style="display: none;">
+        <h2>Book Tickets for <span id="movieTitle"></span></h2>
+
+        <button id="bookButton" onclick="bookTicket()">Book Tickets</button>
+    </section>
+    <footer>
+        <p>&copy; 2024 TickeTribe. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

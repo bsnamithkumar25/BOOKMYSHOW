@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theaters</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Ticke<span>Tribe</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="theaters.html">Theaters</a></li>
+                <li><a href="login.html">Login / Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="theaters-section">
+        <h2>Theater Nearby</h2>
+        <div class="container">
+            <div class="card">
+                <h3>PVR INOX</h3>
+                <p>Location: Forum Mall</p>
+                <button onclick="window.location.href='https://www.google.com/maps'">View Details</button>
+            </div>
+            <div class="card">
+                <h3>AMB cinemas</h3>
+                <p>Location: GT Road</p>
+                <button onclick="window.location.href='https://www.google.com/maps'">View Details</button>
+            </div>
+            <div class="card">
+                <h3>AAA cinemas</h3>
+                <p>Location: Ameerpet</p>
+                <button onclick="window.location.href='https://www.google.com/maps'">View Details</button>
+            </div>
+            <div class="card">
+                <h3>IMAX</h3>
+                <p>Location: Ring Road</p>
+                <button onclick="window.location.href='https://www.google.com/maps'">View Details</button>
+            </div>
+            <div class="card">
+                <h3>Cinepolis</h3>
+                <p>Location: PVP Mall</p>
+                <button onclick="window.location.href='https://www.google.com/maps'">View Details</button>
+            </div>
+            <div class="card">
+                <h3>Capital cinemas</h3>
+                <p>Location: Hitech City</p>
+                <button onclick="window.location.href='https://www.google.com/maps'">View Details</button>
+            </div>
+            <div class="card">
+                <h3>Murthy Matinees</h3>
+                <p>Location: RTC X Roads</p>
+                <button onclick="window.location.href='https://www.google.com/maps'">View Details</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 TickeTribe. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showDetails(theaterName) {
+            alert('You selected: ' + theaterName);
+        }
+    </script>
+</body>
+</html>
